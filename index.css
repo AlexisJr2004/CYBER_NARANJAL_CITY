@@ -1,0 +1,723 @@
+*,*:after, *:before{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#contenedor_carga{
+    background-color: rgba(250, 240, 245, 0.9);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    -webkit-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+    z-index: 10000;
+}
+
+
+
+
+.btn-scrolltop {
+    position: fixed;
+    bottom: 16px;
+    left: 20px;
+    padding: 15px 20px;
+    background: rgb(1, 248, 244);
+    color: white;
+    border: 1px solid white;
+    border-radius: 100%;
+    cursor: pointer;
+    transform: translateY(100px);
+    transition: 0.3s;
+  }
+  
+  .btn-scrolltop-on {
+    transform: translateY(0);
+}
+
+
+
+#carga{
+    border: 15px solid #ccc;
+    border-top-color: #00ffea;
+    border-top-style:groove;
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+
+    position:absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    -webkit-animation: girar 1.5s linear infinite;
+    -o-animation: girar 1.5s linear infinite;
+    animation: girar 1.5s linear infinite;
+}
+@keyframes girar{
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+
+
+
+
+
+
+
+
+
+*{
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth; 
+}
+
+body{
+    font-family:'Arial', sans-serif;
+    margin: 0;
+}
+
+
+@keyframes fanimado{
+    0%{
+        background-position: 0% 50%;
+    }
+
+    50%{
+        background-position: 100% 50%;
+    }
+
+    100%{
+        background-position: 0% 50%;
+    }
+}
+
+h1{ font-size: 3.5em;}
+h2{ font-size: 2.7em;}
+h3{ font-size: 2em;}
+p{ font-size: 1.25em;}
+ul{ list-style: none;}
+li{ font-size: 1.25em;}
+
+button{
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 15px;
+    border: 1px solid rgba(0,0,0,0.5);
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    color: rgb(0, 0, 0);
+    background-color: rgb(16, 224, 224);
+
+
+    background-image: linear-gradient(135deg
+    ,#00B7D4,#62c8e2,#ffffff,#76ffff,#1de6e6,#7ce7cd,#7ce7cd);
+    background-size: 500%;
+    animation: fanimado 10s infinite;
+
+    
+    
+
+}
+
+button:hover{
+    background-color: rgb(34, 184, 184);
+}
+
+.container{
+    max-width: 1400px;
+    margin: auto;
+}
+
+.color-acento{color:rgb(16, 224, 224); }
+
+header{
+    background-color: rgb(250, 250, 250);
+    border-radius: 100px;
+}
+
+header .logo{
+    margin: 0;
+    padding: 25px 30px;
+}
+
+header .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header nav{
+    display: flex;
+    /* flex-direction: column; */
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+header a{
+    padding: 5px 12px;
+    text-decoration: none;
+    font-weight: bold;
+    color:black;
+}
+
+header a:hover{
+    color:rgb(16, 224, 224);
+}
+
+#hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 40vh;
+    color: white;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("MEDIA/hero.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 30px;
+
+
+}
+
+#hero h1{
+    padding-top: 250px;
+    color: white;
+}
+
+
+#hero button{
+    padding-block: auto;
+    font-size: 2em;
+    margin: 150px;
+}
+
+
+
+#quienes-somos .container{
+    text-align: center;
+    padding: 200px 12px;
+}
+
+#quienes-somos .img-container{
+    background-image: url("MEDIA/logo-sin-fondo.png");
+    background-repeat: no-repeat;
+    text-align: center;
+    padding: 100px 5px;
+    image-orientation: from-image;
+    background-size:contain;
+    background-position: center center;
+    border-radius: 6px;
+}
+
+
+
+
+
+#nuestros-programas{
+    background-color: rgba(30,30,30);
+    color: white;
+    text-align: center;
+    border-radius: 15px;
+    background-image: linear-gradient(135deg
+    ,#00B7D4,#4c5355,#ffffff,#00ffff,#1de6e6,#7ce7cd,#7ce7cd);
+    background-size: 500%;
+    animation: fanimado 10s infinite;
+}
+
+#nuestros-programas .container{
+    padding: 100px 12px;
+}
+
+#nuestros-programas h2{
+    margin-top: 0;
+    font-size: 3.2em;
+}
+
+
+
+
+#nuestros-programas .carta{
+    background-position: center center;
+    background-size: cover;
+    padding: 50px 0px;
+    margin: 20px;
+    border-radius: 15px;
+    
+}
+
+.carta:first-child{
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("MEDIA/iess.jpg");
+    
+}
+
+.carta:nth-child(2){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("MEDIA/trabajos-computarizados.jpg");
+}
+
+.carta:nth-child(3){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("MEDIA/pasaporte.jpg");
+}
+
+
+
+
+
+
+
+#nuestros-programas2{
+    background-color: rgba(30,30,30);
+    color: white;
+    text-align: center;
+    border-radius: 15px;
+    background-image: linear-gradient(135deg
+    ,#00B7D4,#4c5355,#ffffff,#00ffff,#1de6e6,#7ce7cd,#7ce7cd);
+    background-size: 500%;
+    animation: fanimado 10s infinite;
+}
+
+#nuestros-programas2 .container2{
+    padding: 100px 12px;
+}
+
+
+
+
+
+#nuestros-programas2 .carta2{
+    background-position: center center;
+    background-size: cover;
+    padding: 50px 0px;
+    margin: 20px;
+    border-radius: 15px;
+}
+
+.carta2:first-child{
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("MEDIA/ANT.jpg");
+}
+
+.carta2:nth-child(2){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("MEDIA/targetas-eventos.jpg");
+}
+
+.carta2:nth-child(3){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("MEDIA/copias.jpg");
+}
+
+
+
+
+
+
+#nuestros-programas3{
+    background-color: rgba(30,30,30);
+    color: white;
+    text-align: center;
+    border-radius: 15px;
+    background-image: linear-gradient(135deg
+    ,#00B7D4,#4c5355,#ffffff,#00ffff,#1de6e6,#7ce7cd,#7ce7cd);
+    background-size: 500%;
+    animation: fanimado 10s infinite;
+}
+
+#nuestros-programas3 .container3{
+    padding: 100px 12px;
+}
+
+#nuestros-programas3 h2{
+    margin-top: 0;
+    font-size: 3.2em;
+}
+
+
+
+
+#nuestros-programas3 .carta3{
+    background-position: center center;
+    background-size: cover;
+    padding: 50px;
+    margin: 20px;
+    border-radius: 15px;
+}
+
+.carta3:first-child{
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("MEDIA/fotos.jpg");
+}
+
+.carta3:nth-child(2){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("MEDIA/anillados.jpg");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#Caracteristicas .container{
+    text-align: center;
+    padding: 250px 12px;
+}
+
+#Caracteristicas li{
+    margin: 16px 0px;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+#contactos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(41, 250, 239);
+    color: rgb(46, 46, 46);
+    height: 40vh;
+
+    background-color: rgba(30,30,30);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    border-radius: 15px;
+    background-image: linear-gradient(135deg
+    ,#00B7D4,#4c5355,#ffffff,#00ffff,#1de6e6,#7ce7cd,#7ce7cd);
+    background-size: 500%;
+    animation: fanimado 10s infinite;
+
+}
+
+#contactos h2{
+    font-size: 4vw;
+}
+
+#contactos button{
+    font-size: 3vw;
+} 
+
+#ubicacion .container{
+    text-align: center;
+}
+
+#ubicacion{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 50vh;
+    color: white;
+    background-image: url("MEDIA/ubicacion-actualizada.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 15px;
+    border-radius: 100px;
+    
+}
+
+#ubicacion h2{
+    margin: 0;
+    color: rgb(0, 68, 57);
+}
+
+
+
+footer{
+    background-color: rgb(230,230,230);
+}
+
+footer p{
+    margin: 0;
+    padding: 12px;
+    color: rgb(100,100,100)
+}
+
+footer .container{
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+
+
+@media (min-width: 1090px){
+    #hero{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+        height: 90vh;
+        color: white;
+        background-image: linear-gradient(
+            0deg,
+            rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5)
+        )
+        ,url("MEDIA/hero.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        border-radius: 30px;
+    }
+    #contactos{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: rgb(41, 250, 239);
+        color: rgb(46, 46, 46);
+        height: 80vh;
+    
+        background-color: rgba(30,30,30);
+        color: rgb(255, 255, 255);
+        text-align: center;
+        border-radius: 15px;
+        background-image: linear-gradient(135deg
+        ,#00B7D4,#4c5355,#ffffff,#00ffff,#1de6e6,#7ce7cd,#7ce7cd);
+        background-size: 500%;
+        animation: fanimado 10s infinite;
+    
+    }
+
+
+    header{
+        height: 185px;
+        position:fixed;
+        width: 100%;
+        border-radius: 20px;
+    }
+
+    header .container{
+        height: 185px;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    header nav{
+        height: center;
+        flex-direction:row;
+        padding-bottom: 0;
+        padding-right: 50px;
+    }
+
+    #hero h1{
+        height: 195px;
+        font-size: 5em;
+        margin-bottom: 0px;
+    }
+
+    #quienes-somos .container{
+        display: flex;
+        justify-content: center;
+    }
+
+    #quienes-somos .texto{
+        width: 50%;
+        max-width: 600px;
+        text-align: initial;
+        padding: 0px 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #quienes-somos .img-container{
+        background-image: url("MEDIA/logo-2.jpg");
+        background-size: cover;
+        background-position: center center;
+        height: 400px;
+        width: 30%;
+    }
+
+    #nuestros-programas .programas{
+        display: flex;
+        justify-content: center;
+    }
+
+    #nuestros-programas p{
+        display: block;
+        margin-bottom: 30px;
+    }
+
+    #nuestros-programas .h3{
+        margin-top: 0;
+    }
+
+    #nuestros-programas .carta{
+        padding: 50px;
+        box-shadow: 2px 2px 10px rgb(255, 255, 255);
+    }
+
+
+
+    #nuestros-programas2 .programas2{
+        display: flex;
+        justify-content: center;
+    }
+
+    #nuestros-programas2 p{
+        display: block;
+        margin-bottom: 30px;
+    }
+
+    #nuestros-programas2 .h3{
+        margin-top: 0;
+    }
+
+    #nuestros-programas2 .carta2{
+        padding: 50px;
+        
+        box-shadow: 2px 2px 10px rgb(255, 255, 255);
+    }
+
+
+
+    #nuestros-programas3 .programas3{
+        display: flex;
+        justify-content: center;
+    }
+
+    #nuestros-programas3 p{
+        display: block;
+        margin-bottom: 30px;
+    }
+
+    #nuestros-programas3 .h3{
+        margin-top: 0;
+    }
+
+    #nuestros-programas3 .carta3{
+        padding: 50px;
+        
+        box-shadow: 2px 2px 10px rgb(255, 255, 255);
+    }
+
+    #Caracteristicas{
+        background-image: url(MEDIA/final.jpg);
+        background-repeat: no-repeat;
+        background-size: 500px 400px;
+        background-position: calc(100vw - 700px) 120px;
+    }
+
+    #Caracteristicas .container{
+        text-align: initial;
+    }
+
+    #Caracteristicas ul{
+        margin-left: 100px;
+    }
+
+    
+
+    #ubicacion{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+        height: 90vh;
+        color: white;
+        background-image: url("MEDIA/ubicacion-actualizada.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        border-radius: 15px;
+        border-radius: 100px;
+        
+    }
+
+    #ubicacion h2{
+        margin: 0;
+        color: rgb(0, 68, 57);
+    }
+
+
+
+
+
+
+
+
+
+
+}
+
+@media (min-width: 1400px) {
+    #Caracteristicas{
+        background-position-x: calc(100vw - 800px);
+    }
+}
